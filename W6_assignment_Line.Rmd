@@ -61,6 +61,7 @@ ggplot(data = Western_Europe) +
   geom_line(mapping = aes(x = Year, 
                            y = Western_Europe$Homicide, 
                            color = Entity)) +
+  facet_wrap(~ Country, nrow = 3, ncol = 2) +
   labs(x = "Year",
        y = "Number of Homicides per 100,000 people",
        title = "Homicide rate in Europe from 1300-2000") +
@@ -86,6 +87,8 @@ ggplot(data = Western_Europe) +
 
 **Your Tasks:**
 
+## I ONLY MADE ALTERATIONS TO THE FIRST GRAPH AND NOT THE SECOND AS IT DIDN'T SEEM NECESSARY.
+
 1) the column name Western_Europe$`Homicide rate in Europe over long-term (per 100,000) is not very easy to work with. Relabel it to 'homicides' for easier use in the ggplots.
 
 ##In order to relabel the coloumn name I choose colomn [4] and rename it to 'Homicides'
@@ -96,7 +99,7 @@ ggplot(data = Western_Europe) +
 
 3) Can you change the facet layout to two columns and three rows so that the trends are more visible? 
 
-##No.
+##Yes, I use the facetwrap command to do this.
 
 4) Move the legend from the current position on the side to below the facets, and label it "Country" instead of "Entity".
 
